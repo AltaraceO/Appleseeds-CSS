@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Typography</title>
+    <style>
+      body {
+        font-size: 10px;
+      }
+
+      .ty h1 {
+        font-size: 2rem;
+        padding-left: 5rem;
+      }
+
+      @media (min-width: 500px) {
+        .ty h1 {
+          font-size: calc(2rem + 2vw);
+        }
+      }
+      @media (min-width: 1000px) {
+        .ty h1 {
+          font-size: 6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ty">
+      <h1>Responsive Typography</h1>
+    </div>
+  </body>
+</html>

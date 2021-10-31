@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      #box-1 {
+        background-color: blanchedalmond;
+        border-width: 3px;
+        border-color: red;
+        border-style: solid;
+      }
+      #box-2 {
+        background: #333;
+      }
+
+      #box-3 {
+        /* background-image: url("img/cloud.jpeg"); */
+        height: 300px;
+        width: 400px;
+        /* background-repeat: no-repeat;
+        background-position: center center; */
+        background: url("img/cloud.jpeg") no-repeat center center/cover;
+      }
+      #box-4 {
+        background: url("img/cloud.jpeg");
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-1">
+      <h3>box one</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis
+        delectus molestias minima optio neque praesentium excepturi numquam
+        corrupti suscipit. Corrupti perspiciatis quo deserunt eaque enim
+        repellendus, alias est eius?
+      </p>
+    </div>
+    <div id="box-2">
+      <h3>box two</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis
+        delectus molestias minima optio neque praesentium excepturi numquam
+        corrupti suscipit. Corrupti perspiciatis quo deserunt eaque enim
+        repellendus, alias est eius?
+      </p>
+    </div>
+    <div id="box-3">
+      <h3>box three</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis
+        delectus molestias minima optio neque praesentium excepturi numquam
+        corrupti suscipit. Corrupti perspiciatis quo deserunt eaque enim
+        repellendus, alias est eius?
+      </p>
+    </div>
+    <div id="box-4">
+      <h3>box four</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis
+        delectus molestias minima optio neque praesentium excepturi numquam
+        corrupti suscipit. Corrupti perspiciatis quo deserunt eaque enim
+        repellendus, alias est eius?
+      </p>
+    </div>
+  </body>
+</html>

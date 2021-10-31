@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Basics</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .center {
+      background-color: beige;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+    }
+    .one {
+      background-color: green;
+      border: beige;
+    }
+    .two {
+      background-color: blue;
+      border: beige;
+    }
+    .three {
+      background-color: red;
+      border: beige;
+    }
+    .r {
+      border: black solid 1px;
+      /* margin: 2rem; */
+      padding: 2rem;
+    }
+  </style>
+  <body>
+    <div class="center">
+      <div class="one r">1</div>
+      <div class="two r">2</div>
+      <div class="three r">3</div>
+      <div class="three r">4</div>
+    </div>
+  </body>
+</html>
