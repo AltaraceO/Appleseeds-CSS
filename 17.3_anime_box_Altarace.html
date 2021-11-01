@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo box color</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+    }
+    .purple {
+      background: purple;
+      width: 15rem;
+      height: 20rem;
+      position: relative;
+    }
+    .purple:after {
+      content: "";
+      background: red;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 50%;
+      height: 100%;
+    }
+
+    .purple:hover {
+      background-color: black;
+    }
+  </style>
+  <body>
+    <div class="purple"></div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>href attribute</title>
+    <style>
+      .link:after {
+        content: "(" attr(href) ")";
+        color: red;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="request">
+      <p>
+        To play the Flexbox Froggy game click
+        <a class="link" href="https://flexboxfroggy.com/"> here</a>. Enjoy!
+      </p>
+    </div>
+  </body>
+</html>

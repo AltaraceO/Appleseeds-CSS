@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tooltip {
+        position: relative;
+        color: red;
+      }
+      .tooltip:hover::after {
+        content: attr(value);
+        color: black;
+        border: yellow solid 1px;
+        border-radius: 25%;
+        width: 225px;
+        padding: 10px;
+        position: absolute;
+        background: yellow;
+        bottom: 100%;
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paragraphs">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis expedita
+        obcaecati quam adipisci laborum rerum fugiat illum vitae deleniti
+        accusantium minima veritatis quos nostrum ratione maiores deserunt
+        asperiores atque, natus eos consequatur harum tenetur id. Eaque, quasi
+        consectetur. Adipisci sapiente dolorem rem suscipit assumenda veritatis
+        libero consequatur accusamus, expedita vitae?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+        facilis iste, quod atque quam ex qui voluptatum iusto ad quia numquam
+        eligendi consequuntur provident libero illum! Culpa, natus magnam
+        explicabo molestias voluptates minus reiciendis consequuntur,
+        perferendis voluptatibus ducimus ut
+        <span class="tooltip" value="placeat deleniti tenetur laborum?">
+          molestiae</span
+        >
+        magni aperiam inventore! Quos distinctio quam placeat deleniti tenetur
+        laborum?
+      </p>
+    </div>
+  </body>
+</html>
