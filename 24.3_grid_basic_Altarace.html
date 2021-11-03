@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Basics</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        "top top top top"
+        "second third third fourth"
+        "fifth fifth fifth fifth ";
+      grid-gap: 1rem;
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        display: grid;
+        grid-template-areas:
+          "top top top top "
+          "second third third third"
+          "fourth fourth fourth fourth"
+          "fifth fifth fifth fifth";
+        grid-gap: 1rem;
+      }
+    }
+    @media (max-width: 500px) {
+      .container {
+        display: grid;
+        grid-template-areas:
+          "top "
+          "second"
+          "third"
+          "fourth"
+          "fifth";
+        grid-gap: 1rem;
+      }
+    }
+
+    .bar {
+      padding: 3rem;
+      border: black solid 1px;
+      border-radius: 25px;
+      background-color: #f4f4f4;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .bar1 {
+      grid-area: top;
+      background: red;
+    }
+
+    .bar2 {
+      grid-area: second;
+      background: blue;
+    }
+    .bar3 {
+      grid-area: third;
+      background: green;
+    }
+    .bar4 {
+      grid-area: fourth;
+      background: purple;
+    }
+    .bar5 {
+      grid-area: fifth;
+      background: yellow;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="bar bar1">Header</div>
+      <div class="bar bar2">Sidebar</div>
+      <div class="bar bar3">
+        <h4>Content</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae,
+          adipisci!
+        </p>
+      </div>
+      <div class="bar bar4">Sidebar2</div>
+      <div class="bar bar5">Footer</div>
+    </div>
+  </body>
+</html>
