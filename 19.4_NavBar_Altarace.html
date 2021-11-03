@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+      position: relative;
+      background-color: yellow;
+    }
+
+    .navList {
+      padding: 20px 20px;
+      position: relative;
+    }
+
+    .navList::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: black;
+      height: 2px;
+      width: 0%;
+      transition: all 0.5s ease-in-out;
+    }
+    .navList:hover::after {
+      width: 100%;
+    }
+    .navList::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      height: 2px;
+      width: 0%;
+      transition: all 0.5s ease-in-out;
+    }
+    .navList:hover::before {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="navList">Home</div>
+    <div class="navList">About</div>
+    <div class="navList">Services</div>
+    <div class="navList">Portfolio</div>
+    <div class="navList">Contact</div>
+  </body>
+</html>

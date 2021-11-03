@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 600px;
+      background-color: black;
+    }
+
+    .first {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      position: relative;
+    }
+    .first::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-top: solid 10px turquoise;
+      border-right: transparent 10px solid;
+      border-radius: 50%;
+      animation: spinAround 10s forwards infinite linear;
+    }
+    .second {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .second::before {
+      content: "";
+      position: absolute;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      border-right: grey 10px solid;
+      border-left: grey 10px solid;
+      border-bottom: grey 10px solid;
+      border-top: solid 10px turquoise;
+      border-radius: 50%;
+      animation: spinAround 10s forwards infinite linear;
+    }
+    @keyframes spinAround {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    /* -------------------------------------------------------------------------- */
+    .third {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: relative;
+      animation: jump 1s forwards infinite linear;
+    }
+    .third::before {
+      content: "";
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: absolute;
+      animation: jump 1s forwards infinite linear;
+      animation-delay: 0.15s;
+
+      left: 150%;
+    }
+    .third::after {
+      content: "";
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: absolute;
+      animation: jump 1s forwards infinite linear;
+      animation-delay: 0.3s;
+      left: 300%;
+    }
+
+    @keyframes jump {
+      0% {
+        box-shadow: 0px -50px turquoise;
+      }
+      50% {
+        box-shadow: 0px -150px blue;
+      }
+      100% {
+        box-shadow: 0px -50px blue;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="fourth"></div>
+  </body>
+</html>

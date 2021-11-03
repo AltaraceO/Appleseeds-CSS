@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transitions</title>
+    <style>
+      body {
+        background: white;
+        height: 600px;
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+      }
+
+      .translatey {
+        border: black solid 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+
+        height: 100px;
+        width: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .translatey::after {
+        content: "FINALLY";
+        color: black;
+        position: absolute;
+        background-color: red;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        height: 100px;
+        width: 200px;
+        left: 0;
+        bottom: 100%;
+        transition: all 2s ease-in-out;
+      }
+
+      .translatey:hover::after {
+        transform: translateY(100px);
+      }
+
+      .translate {
+        border: black solid 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        height: 100px;
+        width: 200px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        transition: all 2s ease-in-out;
+      }
+
+      .translate::after {
+        content: "";
+        color: black;
+        position: absolute;
+        background-color: black;
+        height: 100px;
+        width: 200px;
+        right: 200px;
+        transition: all 2s ease-in-out;
+        z-index: -1;
+      }
+
+      .translate:hover::after {
+        transform: translateX(200px);
+      }
+      .translate:hover {
+        color: white;
+      }
+
+      .rotate {
+        border: black solid 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        height: 100px;
+        width: 200px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      .rotate::after {
+        content: "";
+        color: black;
+        position: absolute;
+        background-color: yellow;
+        height: 100px;
+        width: 200px;
+        right: 30%;
+        bottom: 150%;
+        transition: all 2s ease-in-out;
+        z-index: -1;
+        transform: rotate(-90deg);
+      }
+
+      .rotate:hover::after {
+        transform: rotate(0deg);
+        right: 0;
+        bottom: 0;
+      }
+
+      .scaleNopacity {
+        border: black solid 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        height: 100px;
+        width: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .scaleNopacity::after {
+        content: "Scale & Opacity";
+        color: white;
+        position: absolute;
+        background-color: black;
+        height: 100px;
+        width: 200px;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: all 2s ease;
+        visibility: hidden;
+        transform: scale(2);
+      }
+
+      .scaleNopacity:hover::after {
+        position: absolute;
+        visibility: visible;
+        opacity: 0;
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rotate">Rotate</div>
+    <div class="translate">Translate</div>
+    <div class="translatey">TranslateY</div>
+    <div class="scaleNopacity">Scale & Opacity</div>
+  </body>
+</html>
